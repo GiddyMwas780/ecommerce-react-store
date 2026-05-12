@@ -1,0 +1,178 @@
+:root {
+  --primary: #32cd32;
+  --primary-hover: #28a428;
+  --bg-color: #f0f2f5;
+  --text-main: #2d3436;
+  --glass: rgba(255, 255, 255, 0.95);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.admin_page_wrapper {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.admin_form_container {
+  background: var(--glass);
+  width: 100%;
+  max-width: 850px;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.form_header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.header_icon {
+  font-size: 40px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.form_header h2 {
+  font-size: 28px;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.form_header p {
+  color: #636e72;
+  margin-top: 5px;
+}
+
+/* Form Layout */
+.form_grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+}
+
+.input_group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input_group label {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #2d3436;
+}
+
+.row_inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+input, select {
+  padding: 12px 16px;
+  border: 2px solid #e1e1e1;
+  border-radius: 12px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+input:focus, select:focus {
+  border-color: var(--primary);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(50, 205, 50, 0.1);
+}
+
+/* Upload Styling */
+.upload_box {
+  border: 2px dashed #d1d1d1;
+  height: 250px;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f9fa;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.upload_box:hover {
+  border-color: var(--primary);
+  background: #f0fff0;
+}
+
+.upload_box input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.upload_placeholder {
+  text-align: center;
+  color: #b2bec3;
+}
+
+.upload_icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.img_preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Submit Button */
+.submit_btn {
+  width: 100%;
+  margin-top: 30px;
+  padding: 16px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit_btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(50, 205, 50, 0.3);
+}
+
+.submit_btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Status Messages */
+.status_msg {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.status_msg.success { background: #e8f5e9; color: #2e7d32; }
+.status_msg.error { background: #ffebee; color: #c62828; }
+
+@media (max-width: 768px) {
+  .form_grid { grid-template-columns: 1fr; }
+  .admin_form_container { padding: 25px; }
+}
