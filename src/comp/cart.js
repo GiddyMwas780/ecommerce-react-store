@@ -66,7 +66,7 @@ const total = cart.reduce((sum, item) => {
 
     try {
       // ✅ FIXED: Added /M-Pesa/ to the path and changed to brevo_email.php
-      const response = await fetch('https://54c9-102-219-209-62.ngrok-free.app/M-Pesa/brevo_email.php', {
+      const response = await fetch('https://499b-41-89-51-26.ngrok-free.app/M-Pesa/brevo_email.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -95,7 +95,7 @@ const total = cart.reduce((sum, item) => {
 
       const deductStock = async (cartItems) => {
   try {
-    const response = await fetch('https://54c9-102-219-209-62.ngrok-free.app/M-Pesa/reduce_stock.php', {
+    const response = await fetch('https://499b-41-89-51-26.ngrok-free.app/M-Pesa/reduce_stock.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ items: cartItems })
@@ -115,7 +115,7 @@ const total = cart.reduce((sum, item) => {
 
     try {
       const res = await fetch(
-        `https://54c9-102-219-209-62.ngrok-free.app/M-Pesa/check_payment.php?checkout_request_id=${currentCheckoutId}&t=${Date.now()}`,
+        `https://499b-41-89-51-26.ngrok-free.app/M-Pesa/check_payment.php?checkout_request_id=${currentCheckoutId}&t=${Date.now()}`,
         {
           headers: {
             'ngrok-skip-browser-warning': 'true',
@@ -268,7 +268,7 @@ alert(`✅ Payment Successful!\nReceipt: ${data.receipt}\n\nCheck your email for
     
     try {
       // ✅ CORRECTED PATH: Removed /callback/
-      await fetch('https://54c9-102-219-209-62.ngrok-free.app/M-Pesa/reset_payment.php');
+      await fetch('https://499b-41-89-51-26.ngrok-free.app/M-Pesa/reset_payment.php');
     } catch (e) {
       console.log('Pre-reset error:', e);
     }

@@ -27,7 +27,7 @@ const Nav = ({ search, setSearch, searchproduct }) => {
         <div className='mid_header'>
           <div className='logo'>
             {/* ✅ FIXED: Use forward slashes in image path */}
-            <img src='images\Colorful Print Palace Logo - Made with PosterMyWall (1).png' alt='logo' />
+            <img src='images/Colorful Print Palace Logo - Made with PosterMyWall (1).png' alt='logo' />
           </div>
           <div className='search_box'>
             <input
